@@ -45,10 +45,6 @@ Multi-arch build (experimental using [buildx](https://github.com/docker/buildx))
 ```
 docker buildx build --platform linux/amd64,linux/arm64/v8,linux/ppc64le --tag appwrite/mailcatcher:1.0.0 --push .
 ```
-## Push
-```bash
-docker push appwrite/mailcatcher:1.0.0
-```
 
 ## Find Us
 
