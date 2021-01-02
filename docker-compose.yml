@@ -1,0 +1,9 @@
+---
+version: '3'
+
+services:
+  maildev:
+    build: .
+    restart: unless-stopped
+    ports:
+    - "9503:1080"
