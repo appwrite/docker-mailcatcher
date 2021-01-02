@@ -3,13 +3,13 @@ FROM alpine:3.12 as base
 LABEL maintainer="team@appwrite.io"
 
 ENV NODE_ENV production
-RUN apk add --no-cache nodejs
+RUN apk --upgrade add --no-cache nodejs openssl
 
 # Build
 FROM base as build
 
 WORKDIR /root
-RUN apk add --no-cache curl git npm
+RUN apk --upgrade add --no-cache curl git npm
 RUN git clone https://github.com/maildev/maildev.git \
   && mkdir build \
   && cp maildev/package*.json build
