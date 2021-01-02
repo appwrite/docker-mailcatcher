@@ -8,8 +8,7 @@ language: minimal
 arch:
   - amd64
   - arm64
-  - ppc64le
-  - s390x
+  - arm/v7
 
 os: linux
 
