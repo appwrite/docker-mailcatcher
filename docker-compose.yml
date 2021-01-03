@@ -6,4 +6,5 @@ services:
     build: .
     restart: unless-stopped
     ports:
-    - "9503:1080"
+    - "1080:1080"
+    - "1025:1025"

@@ -3,12 +3,13 @@ notifications:
   email:
   - team@appwrite.io
 
-language: minimal
+dist: xenial
+
+language: shell
 
 arch:
   - amd64
   - arm64
-  - arm/v7
 
 os: linux
 
@@ -26,10 +27,18 @@ script:
   - docker ps -a
   - docker-compose logs maildev
   - >
-    if : >/dev/tcp/localhost/9503; then
+    if : >/dev/tcp/localhost/1080; then
       echo 'Connection available.'
       travis_terminate 0
     else
-      echo 'Connection unavailable.'
+      echo 'HTTP connection unavailable.'
+      travis_terminate 1
+    fi
+  - >
+    if : >/dev/tcp/localhost/1025; then
+      echo 'Connection available.'
+      travis_terminate 0
+    else
+      echo 'SMTP connection unavailable.'
       travis_terminate 1
     fi
