@@ -28,7 +28,7 @@ script:
   - docker-compose logs maildev
   - >
     if : >/dev/tcp/localhost/1080; then
-      echo 'Connection available.'
+      echo 'HTTP connection available.'
       travis_terminate 0
     else
       echo 'HTTP connection unavailable.'
@@ -36,7 +36,7 @@ script:
     fi
   - >
     if : >/dev/tcp/localhost/1025; then
-      echo 'Connection available.'
+      echo 'SMTP connection available.'
       travis_terminate 0
     else
       echo 'SMTP connection unavailable.'
