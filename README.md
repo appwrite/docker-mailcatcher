@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/discord/564160730845151244?label=discord&style=flat-square)](https://appwrite.io/discord)
 [![Docker Pulls](https://img.shields.io/docker/pulls/appwrite/mailcatcher?color=f02e65&style=flat-square)](https://hub.docker.com/r/appwrite/mailcatcher)
 [![Build Status](https://img.shields.io/travis/com/appwrite/docker-mailcatcher?style=flat-square)](https://travis-ci.com/appwrite/docker-mailcatcher)
-[![Twitter Account](https://img.shields.io/twitter/follow/appwrite_io?color=00acee&label=twitter&style=flat-square)](https://twitter.com/appwrite_io)
+[![Twitter Account](https://img.shields.io/twitter/follow/appwrite?color=00acee&label=twitter&style=flat-square)](https://twitter.com/appwrite)
 [![Follow Appwrite on StackShare](https://img.shields.io/badge/follow%20on-stackshare-blue?style=flat-square)](https://stackshare.io/appwrite)
 
 The MailCatcher docker container is used for capturing and debugging emails sent during app development. This container is based on the djfarrelly/maildev docker image with Appwrite specific configuration settings. For a fresh installation of djfarrelly/maildev image use the [docker original image](https://github.com/maildev/maildev).
