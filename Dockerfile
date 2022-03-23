@@ -1,5 +1,5 @@
 # Base
-FROM alpine:3.15 as base
+FROM alpine:3.15.1 as base
 LABEL maintainer="team@appwrite.io"
 
 ENV NODE_ENV production
@@ -23,7 +23,9 @@ RUN npm install \
 # Prod
 FROM base as prod
 
-RUN adduser node -D
+RUN apk -U upgrade && \
+    adduser node -D
+    
 USER node
 WORKDIR /home/node
 
