@@ -1,5 +1,5 @@
 # Base
-FROM alpine:3.22 AS base
+FROM alpine:3.24@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf AS base
 LABEL maintainer="team@appwrite.io"
 
 ENV NODE_ENV=production
